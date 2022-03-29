@@ -3,5 +3,37 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-  }
+    "ngx-pagememory": {
+      "projectType": "library",
+      "root": "projects/ngx-pagememory",
+      "sourceRoot": "projects/ngx-pagememory/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/ngx-pagememory/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/ngx-pagememory/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/ngx-pagememory/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ngx-pagememory/src/test.ts",
+            "tsConfig": "projects/ngx-pagememory/tsconfig.spec.json",
+            "karmaConfig": "projects/ngx-pagememory/karma.conf.js"
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "ngx-pagememory"
 }
