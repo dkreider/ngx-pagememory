@@ -1,8 +1,28 @@
-import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { APP_INITIALIZER, ModuleWithProviders, NgModule } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgxPagememoryService } from './ngx-pagememory.service';
 
 @NgModule({
   declarations: [],
-  imports: [],
-  exports: []
+  imports: [
+    CommonModule
+  ],
 })
-export class NgxPagememoryModule { }
+export class NgxPagememoryModule { 
+
+  static forRoot(): ModuleWithProviders<NgxPagememoryModule> {
+    return {
+      ngModule: NgxPagememoryModule,
+      providers: [
+        {
+          provide: APP_INITIALIZER,
+          deps: [NgxPagememoryService],
+          useFactory: (pM: NgxPagememoryService) => () => pM.register(),
+          multi: true
+        }
+      ]
+    }
+  }
+
+}
