@@ -11,13 +11,13 @@ import { NgxPagememoryService } from './ngx-pagememory.service';
 })
 export class NgxPagememoryModule { 
 
-  static forRoot(): ModuleWithProviders<NgxPagememoryModule> {
+  public static forRoot(): ModuleWithProviders<NgxPagememoryModule> {
     return {
       ngModule: NgxPagememoryModule,
       providers: [
         {
           provide: APP_INITIALIZER,
-          deps: [NgxPagememoryService],
+          deps: [NgxPagememoryService, Router],
           useFactory: (pM: NgxPagememoryService) => () => pM.register(),
           multi: true
         }
