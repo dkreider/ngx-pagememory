@@ -1,4 +1,4 @@
-name: '@ngneat/helipopper'
+name: 'ngx-pagememory'
 
 on:
   push:
