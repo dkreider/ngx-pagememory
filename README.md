@@ -1,27 +1,38 @@
-# NgxPagememory
+<p align="center">
+ <img width="20%" height="20%" src="./logo.png">
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.1.4.
+<br />
 
-## Development server
+[![ngx-pagememory](https://github.com/dkreider/ngx-pagememory/actions/workflows/ngx-pagememory.yml/badge.svg)](https://github.com/dkreider/ngx-pagememory/actions/workflows/ngx-pagememory.yml)
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
-## Code scaffolding
+A lightweight Angular library that remembers the last page a user visited when they leave an Angular application and them routes them to it when the re-open it.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+### Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+```
+ng add ngx-pagememory
+```
 
-## Running unit tests
+## Usage
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Import the `NgxPagememoryModule` into your `AppModule`. You can configure it as shown below:
 
-## Running end-to-end tests
+```ts
+import { NgxPagememoryModule } from 'ngx-pagememory';
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+@NgModule({
+    declarations: [AppComponent],
+    imports: [
+        NgxPagememoryModule.forRoot()
+    ],
+    bootstrap: [AppComponent]
+})
+export class AppModule {
+}
+```
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Credits
+- <a href="https://www.flaticon.com/free-icons/brain" title="brain icons">Brain icons created by Vitaly Gorbachev - Flaticon</a>
