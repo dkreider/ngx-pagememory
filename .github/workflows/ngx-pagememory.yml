@@ -43,7 +43,7 @@ jobs:
       - name: Build library
         run: npm run build
 
-      - uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-          package: dist/ngx-pagememory/package.json
+      #- uses: JS-DevTools/npm-publish@v1
+      #  with:
+      #    token: ${{ secrets.NPM_TOKEN }}
+      #    package: dist/ngx-pagememory/package.json
