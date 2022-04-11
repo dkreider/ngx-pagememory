@@ -1,11 +1,21 @@
 {
   "name": "ngx-pagememory",
-  "version": "13.0.0",
+  "type": "module",
+  "version": "13.0.1",
   "peerDependencies": {
     "@angular/common": "^13.1.0",
     "@angular/core": "^13.1.0"
   },
-  "dependencies": {
-    "tslib": "^2.3.0"
+  "scripts": {
+    "build": "tsc -p tsconfig.schematics.json",
+    "postbuild": "copyfiles schematics/*/schema.json schematics/*/files/** schematics/collection.json ../../dist/ngx-pagememory/"
+  },
+  "schematics": "./schematics/collection.json",
+  "devDependencies": {
+    "copyfiles": "file:../../node_modules/copyfiles",
+    "typescript": "file:../../node_modules/typescript"
+  },
+  "ng-add": {
+    "save": "dependencies"
   }
 }

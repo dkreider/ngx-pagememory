@@ -4,9 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "build:ngx-pagememory": "ng-packagr -p projects/ngx-pagememory/ng-package.json && cd projects/ngx-pagememory && npm run build",
+    "test:ngx-pagememory": "ng test ngx-pagememory",
+    "watch": "ng build --watch --configuration development"
   },
   "private": true,
   "dependencies": {
@@ -28,6 +28,7 @@
     "@angular/compiler-cli": "~13.1.0",
     "@types/jasmine": "~3.10.0",
     "@types/node": "^12.11.1",
+    "copyfiles": "^2.4.1",
     "jasmine-core": "~3.10.0",
     "karma": "~6.3.0",
     "karma-chrome-launcher": "~3.1.0",

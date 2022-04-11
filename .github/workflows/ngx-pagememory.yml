@@ -38,10 +38,10 @@ jobs:
         run: npm ci
         
       - name: Test library
-        run: npm run test
+        run: npm run test:ngx-pagememory
 
       - name: Build library
-        run: npm run build
+        run: npm run build:ngx-pagememory
 
       #- uses: JS-DevTools/npm-publish@v1
       #  with:
