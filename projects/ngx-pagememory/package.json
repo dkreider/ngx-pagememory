@@ -1,6 +1,5 @@
 {
   "name": "ngx-pagememory",
-  "type": "module",
   "version": "13.0.1",
   "peerDependencies": {
     "@angular/common": "^13.1.0",
