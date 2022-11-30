@@ -1,5 +1,5 @@
 <p align="center">
- <img width="20%" height="20%" src="./logo.png">
+ <img width="20%" height="20%" src="https://github.com/dkreider/ngx-pagememory/blob/main/logo.png">
 </p>
 
 <br />
